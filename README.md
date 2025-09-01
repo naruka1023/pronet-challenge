@@ -28,8 +28,8 @@ An Angular app that displays a landing page, characters, its detail page, and le
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/naruka1023/pronet-challenge
+cd pronet-challenge
 ```
 
 Install Dependencies:
