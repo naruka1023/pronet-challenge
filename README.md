@@ -1,6 +1,6 @@
 # Pronet Challenge App
 
-An Angular app that displays a landing page, characters, its detail page, and lets users mark/unmark favorites.
+An Angular app that displays a landing page, list of characters, its detail page, a search bar for characters, and lets users mark/unmark favorites.
 
 ---
 
@@ -8,6 +8,7 @@ An Angular app that displays a landing page, characters, its detail page, and le
 
 - View a landing page
 - View a list of characters
+- Search bar to filter characters
 - Navigate to detail pages
 - Mark/unmark characters as favorites
 
