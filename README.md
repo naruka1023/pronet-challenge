@@ -1,0 +1,63 @@
+# Pronet Challenge App
+
+An Angular app that displays a landing page, characters, its detail page, and lets users mark/unmark favorites.
+
+---
+
+## 🚀 Features
+
+- View a landing page
+- View a list of characters
+- Navigate to detail pages
+- Mark/unmark characters as favorites
+
+---
+
+## 🛠️ Tech Stack
+
+- Angular
+- Ngrx
+- Rxjs
+- Bootstrap
+- Jasmine + Karma
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
+Install Dependencies:
+
+```bash
+npm install
+```
+
+Start the dev server:
+
+```bash
+ng serve
+```
+
+or
+
+```bash
+npm start
+```
+
+Run the test:
+
+```bash
+ng test
+```
+
+or
+
+```bash
+ng test --watch
+```

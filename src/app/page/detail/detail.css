@@ -1,0 +1,20 @@
+.profileImageDetail {
+  height: auto;
+  max-width: 400px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .responsiveText {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 450px) {
+  .responsiveText {
+    font-size: 0.8rem !important;
+  }
+}
+@media (max-width: 370px) {
+  .responsiveText {
+    font-size: 0.6rem !important;
+  }
+}

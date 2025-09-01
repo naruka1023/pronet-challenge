@@ -1,0 +1,98 @@
+<div
+  *ngIf="character$ | async as character"
+  class="fs-5 responsiveText m-3 bg-light rounded-5 shadow p-sm-5 p-3"
+  style="line-break: anywhere"
+>
+  <div class="row">
+    <div class="col-1">
+      <button class="btn" (click)="back()">
+        <i class="bi bi-arrow-left-circle-fill fs-1"></i>
+      </button>
+    </div>
+    <div class="col-10">
+      <div class="text-center">
+        <img
+          [src]="character.gender === 'Male' ? 'male.png' : 'female.png'"
+          class="border rounded-circle mb-3 profileImageDetail"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="mb-1 mt-2 gap-4 mx-auto">
+    <div class="text-center fs-2">
+      {{ character.name | empty }}
+    </div>
+    <div class="text-center fs-4 my-3">
+      {{ character.culture | empty }}
+    </div>
+    <div>
+      <div class="d-xl-flex d-block text-xl-start text-center justify-content-around my-5">
+        <div>born: {{ character.born | empty }}</div>
+        <div>died: {{ character.died | empty }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-12">
+          <div class="m-auto mb-xl-5">
+            @if(character.titles.length > 0){
+            <div class="fs-3 text-center mb-3">Title</div>
+            @for (title of character.titles; track title) {
+            <div class="alert alert-primary text-center rounded-5" role="alert">
+              {{ title }}
+            </div>
+            } }
+          </div>
+        </div>
+        <div class="col-xl-6 col-12">
+          <div class="m-auto mb-5">
+            @if(character.titles.length > 0){
+            <div class="fs-3 text-center mb-3">Alias</div>
+            @for (title of character.aliases; track title) {
+            <div class="alert alert-danger text-center rounded-5" role="alert">
+              {{ title }}
+            </div>
+            } }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid mx-auto gap-4">
+      <div>Father: {{ character.father | empty }}</div>
+      <div>Mother: {{ character.mother | empty }}</div>
+      <div>Spouse: {{ character.spouse | empty }}</div>
+      <div>
+        <div class="row">
+          <div class="col-xl-6 col-12">
+            Books: @if(character.books.length > 0){
+            <ul>
+              @for(book of character.books; track book){
+              <li>{{ book }}</li>
+              }
+            </ul>
+            }@else{ - }
+          </div>
+          <div class="col-xl-6 col-12">
+            Books: @if(character.povBooks.length > 0){
+            <ul>
+              @for(povBook of character.povBooks; track povBook){
+              <li>{{ povBook }}</li>
+              }
+            </ul>
+            }@else{ - }
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block">
+        TV Series: @if(character.tvSeries.length > 0){ @for(series of character.tvSeries; track
+        series){
+        <span class="mx-1 badge text-bg-primary">{{ series }}</span>
+        } }@else{ - }
+      </div>
+      <div class="d-inline-block">
+        Played By: @if(character.playedBy.length > 0){ @for(playedBy of character.playedBy; track
+        playedBy){
+        <span class="mx-1 badge text-bg-success">{{ playedBy }}</span>
+        } }@else{ - }
+      </div>
+    </div>
+  </div>
+</div>

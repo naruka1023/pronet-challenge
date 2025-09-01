@@ -1,0 +1,25 @@
+<div class="container">
+  <ul class="nav nav-pills nav-fill py-4 sticky-top first">
+    <li class="nav-item">
+      <a
+        class="nav-link listLink"
+        aria-current="page"
+        routerLink="list"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >List</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link favoriteLink" routerLink="favorite" routerLinkActive="active">Favorites</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link landingLink" style="cursor: pointer" (click)="goToLanding()"
+        >Landing Page</a
+      >
+    </li>
+  </ul>
+  <main class="py-4">
+    <router-outlet></router-outlet>
+  </main>
+</div>

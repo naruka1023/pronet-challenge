@@ -1,0 +1,9 @@
+@if(!emptyFlag){
+<div class="equal-height row row-gap-3">
+  @for (item of favorites$ | async; track item) {
+  <app-character [item]="item"></app-character>
+  }
+</div>
+}@else {
+<div class="text-center emptyFavorite m-auto p-5 fs-2">No Favorites Selected</div>
+}

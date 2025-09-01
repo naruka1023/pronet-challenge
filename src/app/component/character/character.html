@@ -1,0 +1,54 @@
+<div class="border rounded border-light-subtle rounded-4 card justify-content-between shadow">
+  <div class="image" [ngClass]="loaded ? 'd-none' : 'd-block'"></div>
+  <div class="pt-2 px-3">
+    <div class="d-grid gap-2">
+      <img
+        [src]="item().gender === 'Male' ? 'male.png' : 'female.png'"
+        (load)="loaded = true"
+        [class.loaded]="loaded"
+        class="mx-auto border rounded-circle my-1 profileImage"
+        [ngClass]="!loaded ? 'd-none' : 'd-block'"
+      />
+      <div class="text-center fs-3">
+        {{ item().name | empty }}
+      </div>
+      <div class="text-center fs-4">
+        {{ item().culture | empty }}
+      </div>
+      <div class="fs-6 d-grid gap-2">
+        <div><b>born:</b> {{ item().born | empty }}</div>
+        <div><b>died:</b> {{ item().died | empty }}</div>
+        <div>
+          <span><b>Titles:</b></span>
+          @if(item().titles.length == 0){ - }@else {
+
+          <ul class="overflow-auto">
+            @for (title of item().titles; track title) {
+            <li>{{ title }}</li>
+            }
+          </ul>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  @if(isDashboard){
+  <div class="pb-2 px-3 mt-2 mb-2 gap-2 d-grid">
+    <div class="d-flex column-gap-2">
+      <button
+        class="btn btn-primary"
+        style="width: -webkit-fill-available"
+        type="button"
+        (click)="goToDetail()"
+      >
+        Details
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="toggleFavorite()">
+        @if(isFavoritePage){ Remove }@else {
+        <i [ngClass]="(favorite$ | async) ? 'bi bi-heart-fill' : 'bi bi-heart'"></i>
+        }
+      </button>
+    </div>
+  </div>
+  }
+</div>

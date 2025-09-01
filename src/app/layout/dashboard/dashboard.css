@@ -1,0 +1,6 @@
+.first {
+  position: sticky;
+  top: 0;
+  background: var(--bs-secondary-bg-subtle);
+  z-index: 10;
+}

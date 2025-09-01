@@ -1,0 +1,11 @@
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.second {
+  position: sticky;
+  top: 88px;
+  background: lightgreen;
+  z-index: 9;
+}
