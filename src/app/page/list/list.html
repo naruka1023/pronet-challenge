@@ -35,11 +35,10 @@
 <div class="equal-height row row-gap-3">
   @for (item of filteredItems$ | async; track item) {
   <app-character [item]="item"></app-character>
+  } @if((filter$ | async) == ''){
+  <app-skeleton></app-skeleton>
+  <app-skeleton></app-skeleton>
   }
-  <!-- @if((loading$ | async)){ -->
-  <app-skeleton></app-skeleton>
-  <app-skeleton></app-skeleton>
-  <!-- } -->
 </div>
 } @else {
 <div class="text-center m-auto p-5 fs-2 emptyFavorite">No Favorites Selected</div>
